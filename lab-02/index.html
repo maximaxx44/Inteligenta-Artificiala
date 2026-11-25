@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игра MAX и MIN · ЛР2</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="model.js"></script>
+<script defer src="diagram.js"></script>
+<script defer src="app.js"></script>
+<main>
+  <header>
+    <p class="course">Inteligența Artificială · ЛР2 · Вариант 1</p>
+    <h1>Игра MAX и MIN</h1>
+    <p>Выбери путь в бинарном дереве. MAX стремится увеличить итоговый счёт, MIN стремится его уменьшить.</p>
+  </header>
+  <section aria-labelledby="play">
+    <h2 id="play">Партия</h2>
+    <div class="actions">
+      <label>Моя роль <select id="role"><option>MAX</option><option>MIN</option></select></label>
+      <button id="restart">Новая партия</button>
+      <button id="left" class="primary">Налево</button>
+      <button id="right" class="primary">Направо</button>
+    </div>
+    <p id="status" role="status"></p>
+  </section>
+  <section aria-labelledby="compare">
+    <h2 id="compare">Сравнение алгоритмов</h2>
+    <div class="actions">
+      <label>Обход <select id="order"><option value="left">Слева направо</option><option value="right">Справа налево</option></select></label>
+      <button id="measure">Измерить время</button>
+    </div>
+    <table>
+      <thead><tr><th>Метод</th><th>Оценка</th><th>Узлы</th><th>Листья</th><th>Отсечения</th><th>мкс / запуск</th></tr></thead>
+      <tbody id="comparison"></tbody>
+    </table>
+  </section>
+  <section aria-labelledby="tree">
+    <h2 id="tree">Дерево поиска</h2>
+    <p id="legend">Зелёный путь показывает ходы партии. Серые узлы пропущены при альфа-бета отсечении. Знак ≤ или ≥ отмечает границу оценки.</p>
+    <div class="scroll"><svg id="graph" viewBox="0 0 1100 392" role="img" aria-label="Бинарное дерево поиска глубины 5"></svg></div>
+  </section>
+</main>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прогноз цен на энергию · Мамдани</title><link rel="stylesheet" href="style.css">
+<script src="model.js" defer></script><script src="app.js" defer></script></head>
+<body><main>
+<header><p class="eyebrow">ИНТЕЛЛЕКТУАЛЬНЫЕ СИСТЕМЫ</p><h1>Прогноз цен на энергию</h1><p>Нечёткий вывод Мамдани по спросу, предложению и инфляции.</p></header>
+<div class="overview">
+<section><h2>Исходные данные</h2><form novalidate>
+<label>Спрос, индекс 0-100<input name="demand" inputmode="decimal" value="50"></label>
+<label>Предложение, индекс 0-100<input name="supply" inputmode="decimal" value="50"></label>
+<label>Инфляция, 0-20 %<input name="inflation" inputmode="decimal" value="4"></label>
+<label>Сценарий<select id="presets"><option value="">Выбрать пример</option></select></label>
+<button>Рассчитать</button><p id="error" role="alert" hidden></p>
+</form></section>
+<section class="forecast" aria-live="polite"><h2>Изменение цены</h2><output id="value"></output><p id="interpretation"></p><small>Учебная модель с заданными правилами и шкалами.</small></section>
+</div>
+<div class="grid">
+<section><h2>Функции принадлежности</h2><div id="membership"></div></section>
+<section><h2>Прогноз при разных уровнях инфляции</h2><p>Спрос и предложение фиксированы на выбранных значениях.</p><div id="inflation-chart"></div>
+<h2>Зависимость от спроса и предложения</h2><p id="heat-label"></p><div id="heatmap"></div></section>
+</div>
+<section><h2>Таблица правил</h2><table><thead><tr><th>№</th><th>Условие</th><th>Вывод</th><th>Вес</th><th>Активация</th></tr></thead><tbody id="rules"></tbody></table></section>
+</main></body></html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Стая птиц · Boids</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="model.js"></script>
+<script defer src="app.js"></script>
+<main>
+  <header>
+    <p class="course">Inteligența Artificială · ЛР3 · Вариант 1</p>
+    <h1>Стая птиц</h1>
+    <p>Модель Boids. 36 птиц движутся по полю 100 × 100.</p>
+  </header>
+  <div class="layout">
+    <section class="scene" aria-label="Симуляция">
+      <canvas width="600" height="600" aria-label="Поле 100 на 100, треугольники показывают положение и направление птиц"></canvas>
+      <div class="stats">
+        <div>Шаг <strong id="step">0</strong></div>
+        <div>Поляризация <strong id="polarization"></strong></div>
+        <div>Близкие пары <strong id="pairs"></strong></div>
+      </div>
+    </section>
+    <section class="controls">
+      <h2>Параметры</h2>
+      <label>Сценарий <select id="preset"></select></label>
+      <div id="sliders"></div>
+      <div class="actions">
+        <button id="toggle" type="button">Пауза</button>
+        <button id="reset" type="button">Сначала</button>
+      </div>
+      <p>Смена сценария или параметра запускает симуляцию с теми же начальными позициями и скоростями.</p>
+    </section>
+  </div>
+</main>
+</html>

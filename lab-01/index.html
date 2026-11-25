@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Распознавание формального языка · ЛР1</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="model.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="course">Inteligența Artificială · ЛР1 · Вариант 11</p>
+      <h1>Конечный автомат</h1>
+      <p>Распознаёт слова вида <code>(ab)<sup>n</sup>(cd)<sup>m</sup></code>, где <var>n</var> ≥ 2 и чётно, а <var>m</var> ≥ 1 и нечётно.</p>
+    </header>
+    <section>
+      <form>
+        <label for="word">Входное слово</label>
+        <div class="entry">
+          <input id="word" type="text" value="ababcd" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <button type="submit">Проверить</button>
+        </div>
+      </form>
+      <div class="examples" aria-label="Примеры">
+        <button type="button" data-word="ababcd">ababcd</button>
+        <button type="button" data-word="ababcdcdcd">ababcdcdcd</button>
+        <button type="button" data-word="ababcdcd">ababcdcd</button>
+        <button type="button" data-word="abab cd">abab cd</button>
+        <button type="button" data-word="">Пустое слово</button>
+      </div>
+      <p id="result" role="status"></p>
+    </section>
+    <section>
+      <h2>Диаграмма переходов</h2>
+      <div class="diagram"><img src="dfa.svg" alt="Старт в q0. Первый чётный блок ab приводит в q4. Далее цикл cd чередует q7 и q8. Только q7 принимающее. Остальные переходы ведут в тупик."></div>
+    </section>
+    <section>
+      <h2>Трасса слова</h2>
+      <p id="empty"></p>
+      <div class="trace">
+        <table>
+          <thead><tr><th>Шаг</th><th>Состояние</th><th>Символ</th><th>Переход в</th></tr></thead>
+          <tbody id="steps"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

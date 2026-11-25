@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 392"><title>Альфа-бета отсечение и оптимальный путь</title><rect width="1100" height="392" rx="8" fill="#101c24"/>
+<g font-family="system-ui, sans-serif" font-size="11"><path d="M558 24L294 92" fill="none" stroke="#9fe1ce" stroke-width="3"/><path d="M294 92L162 160" fill="none" stroke="#9fe1ce" stroke-width="3"/><path d="M162 160L96 228" fill="none" stroke="#9fe1ce" stroke-width="3"/><path d="M96 228L63 296" fill="none" stroke="#9fe1ce" stroke-width="3"/><path d="M63 296L46.5 364" fill="none" stroke="#9fe1ce" stroke-width="3"/><path d="M63 296L79.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M96 228L129 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M129 296L112.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M129 296L145.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M162 160L228 228" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M228 228L195 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M195 296L178.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M195 296L211.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M228 228L261 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M261 296L244.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M261 296L277.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M294 92L426 160" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M426 160L360 228" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M360 228L327 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M327 296L310.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M327 296L343.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M360 228L393 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M393 296L376.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M393 296L409.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M426 160L492 228" fill="none" stroke="#354b55" stroke-width="1"/><path d="M492 228L459 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M459 296L442.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M459 296L475.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M492 228L525 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M525 296L508.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M525 296L541.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M558 24L822 92" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M822 92L690 160" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M690 160L624 228" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M624 228L591 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M591 296L574.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M591 296L607.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M624 228L657 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M657 296L640.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M657 296L673.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M690 160L756 228" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M756 228L723 296" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M723 296L706.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M723 296L739.5 364" fill="none" stroke="#5b8091" stroke-width="1"/><path d="M756 228L789 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M789 296L772.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M789 296L805.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M822 92L954 160" fill="none" stroke="#354b55" stroke-width="1"/><path d="M954 160L888 228" fill="none" stroke="#354b55" stroke-width="1"/><path d="M888 228L855 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M855 296L838.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M855 296L871.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M888 228L921 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M921 296L904.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M921 296L937.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M954 160L1020 228" fill="none" stroke="#354b55" stroke-width="1"/><path d="M1020 228L987 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M987 296L970.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M987 296L1003.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M1020 228L1053 296" fill="none" stroke="#354b55" stroke-width="1"/><path d="M1053 296L1036.5 364" fill="none" stroke="#354b55" stroke-width="1"/><path d="M1053 296L1069.5 364" fill="none" stroke="#354b55" stroke-width="1"/><g><title>Узел 1: 4, ход партии</title>
+<rect x="544" y="12" width="28" height="24" rx="5" fill="#285a54" stroke="#9fe1ce"/>
+<text x="558" y="28" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 2: 4, ход партии</title>
+<rect x="280" y="80" width="28" height="24" rx="5" fill="#285a54" stroke="#9fe1ce"/>
+<text x="294" y="96" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 4: 4, ход партии</title>
+<rect x="148" y="148" width="28" height="24" rx="5" fill="#285a54" stroke="#9fe1ce"/>
+<text x="162" y="164" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 8: 4, ход партии</title>
+<rect x="82" y="216" width="28" height="24" rx="5" fill="#285a54" stroke="#9fe1ce"/>
+<text x="96" y="232" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 16: 4, ход партии</title>
+<rect x="49" y="284" width="28" height="24" rx="5" fill="#285a54" stroke="#9fe1ce"/>
+<text x="63" y="300" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 32: 4, ход партии</title>
+<rect x="32.5" y="352" width="28" height="24" rx="5" fill="#285a54" stroke="#9fe1ce"/>
+<text x="46.5" y="368" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 33: -2</title>
+<rect x="65.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="79.5" y="368" fill="#eaf4f5" text-anchor="middle">-2</text></g><g><title>Узел 17: ≥7</title>
+<rect x="115" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="129" y="300" fill="#eaf4f5" text-anchor="middle">≥7</text></g><g><title>Узел 34: 7</title>
+<rect x="98.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="112.5" y="368" fill="#eaf4f5" text-anchor="middle">7</text></g><g><title>Узел 35: пропущен</title>
+<rect x="131.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="145.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 9: ≤2</title>
+<rect x="214" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="228" y="232" fill="#eaf4f5" text-anchor="middle">≤2</text></g><g><title>Узел 18: 9</title>
+<rect x="181" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="195" y="300" fill="#eaf4f5" text-anchor="middle">9</text></g><g><title>Узел 36: 5</title>
+<rect x="164.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="178.5" y="368" fill="#eaf4f5" text-anchor="middle">5</text></g><g><title>Узел 37: 9</title>
+<rect x="197.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="211.5" y="368" fill="#eaf4f5" text-anchor="middle">9</text></g><g><title>Узел 19: ≤2</title>
+<rect x="247" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="261" y="300" fill="#eaf4f5" text-anchor="middle">≤2</text></g><g><title>Узел 38: -6</title>
+<rect x="230.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="244.5" y="368" fill="#eaf4f5" text-anchor="middle">-6</text></g><g><title>Узел 39: 2</title>
+<rect x="263.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="277.5" y="368" fill="#eaf4f5" text-anchor="middle">2</text></g><g><title>Узел 5: ≥6</title>
+<rect x="412" y="148" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="426" y="164" fill="#eaf4f5" text-anchor="middle">≥6</text></g><g><title>Узел 10: ≥6</title>
+<rect x="346" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="360" y="232" fill="#eaf4f5" text-anchor="middle">≥6</text></g><g><title>Узел 20: ≥8</title>
+<rect x="313" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="327" y="300" fill="#eaf4f5" text-anchor="middle">≥8</text></g><g><title>Узел 40: 8</title>
+<rect x="296.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="310.5" y="368" fill="#eaf4f5" text-anchor="middle">8</text></g><g><title>Узел 41: пропущен</title>
+<rect x="329.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="343.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 21: ≥6</title>
+<rect x="379" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="393" y="300" fill="#eaf4f5" text-anchor="middle">≥6</text></g><g><title>Узел 42: 6</title>
+<rect x="362.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="376.5" y="368" fill="#eaf4f5" text-anchor="middle">6</text></g><g><title>Узел 43: пропущен</title>
+<rect x="395.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="409.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 11: пропущен</title>
+<rect x="478" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="492" y="232" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 22: пропущен</title>
+<rect x="445" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="459" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 44: пропущен</title>
+<rect x="428.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="442.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 45: пропущен</title>
+<rect x="461.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="475.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 23: пропущен</title>
+<rect x="511" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="525" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 46: пропущен</title>
+<rect x="494.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="508.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 47: пропущен</title>
+<rect x="527.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="541.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 3: ≤4</title>
+<rect x="808" y="80" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="822" y="96" fill="#eaf4f5" text-anchor="middle">≤4</text></g><g><title>Узел 6: ≤4</title>
+<rect x="676" y="148" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="690" y="164" fill="#eaf4f5" text-anchor="middle">≤4</text></g><g><title>Узел 12: ≤3</title>
+<rect x="610" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="624" y="232" fill="#eaf4f5" text-anchor="middle">≤3</text></g><g><title>Узел 24: ≤3</title>
+<rect x="577" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="591" y="300" fill="#eaf4f5" text-anchor="middle">≤3</text></g><g><title>Узел 48: 3</title>
+<rect x="560.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="574.5" y="368" fill="#eaf4f5" text-anchor="middle">3</text></g><g><title>Узел 49: -5</title>
+<rect x="593.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="607.5" y="368" fill="#eaf4f5" text-anchor="middle">-5</text></g><g><title>Узел 25: пропущен</title>
+<rect x="643" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="657" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 50: пропущен</title>
+<rect x="626.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="640.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 51: пропущен</title>
+<rect x="659.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="673.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 13: ≤4</title>
+<rect x="742" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="756" y="232" fill="#eaf4f5" text-anchor="middle">≤4</text></g><g><title>Узел 26: ≤4</title>
+<rect x="709" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="723" y="300" fill="#eaf4f5" text-anchor="middle">≤4</text></g><g><title>Узел 52: 1</title>
+<rect x="692.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="706.5" y="368" fill="#eaf4f5" text-anchor="middle">1</text></g><g><title>Узел 53: 4</title>
+<rect x="725.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#5b8091"/>
+<text x="739.5" y="368" fill="#eaf4f5" text-anchor="middle">4</text></g><g><title>Узел 27: пропущен</title>
+<rect x="775" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="789" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 54: пропущен</title>
+<rect x="758.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="772.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 55: пропущен</title>
+<rect x="791.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="805.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 7: пропущен</title>
+<rect x="940" y="148" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="954" y="164" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 14: пропущен</title>
+<rect x="874" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="888" y="232" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 28: пропущен</title>
+<rect x="841" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="855" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 56: пропущен</title>
+<rect x="824.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="838.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 57: пропущен</title>
+<rect x="857.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="871.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 29: пропущен</title>
+<rect x="907" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="921" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 58: пропущен</title>
+<rect x="890.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="904.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 59: пропущен</title>
+<rect x="923.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="937.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 15: пропущен</title>
+<rect x="1006" y="216" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="1020" y="232" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 30: пропущен</title>
+<rect x="973" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="987" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 60: пропущен</title>
+<rect x="956.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="970.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 61: пропущен</title>
+<rect x="989.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="1003.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 31: пропущен</title>
+<rect x="1039" y="284" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="1053" y="300" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 62: пропущен</title>
+<rect x="1022.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="1036.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><g><title>Узел 63: пропущен</title>
+<rect x="1055.5" y="352" width="28" height="24" rx="5" fill="#152831" stroke="#354b55"/>
+<text x="1069.5" y="368" fill="#68818b" text-anchor="middle">·</text></g><text x="4" y="28" fill="#b9d0d5">MAX</text><text x="4" y="96" fill="#b9d0d5">MIN</text><text x="4" y="164" fill="#b9d0d5">MAX</text><text x="4" y="232" fill="#b9d0d5">MIN</text><text x="4" y="300" fill="#b9d0d5">MAX</text><text x="4" y="368" fill="#b9d0d5">Лист</text></g></svg>

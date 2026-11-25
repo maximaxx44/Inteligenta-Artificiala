@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Лабораторная №6 | Поиск состояний</title><link rel="stylesheet" href="style.css"><script src="model.js" defer></script><script src="app.js" defer></script></head>
+<body><main><header><p>INTELIGENȚA ARTIFICIALĂ / LAB 06</p><h1>Три переключателя</h1><p>Один ход меняет ровно один бит.</p></header>
+<section><h2>Сравнение поиска</h2><form><label>Начало<select id="start"></select></label><label>Цель<select id="goal"></select></label><button>Рассчитать</button></form><div id="results" class="table"></div><p>Посещения считаются при извлечении из очереди, включая цель. Фронтир показывает максимальное число ожидающих состояний. Время усреднено по 1 000 запускам.</p></section>
+<section><h2>Граф переходов</h2><label>Выделить маршрут<select id="strategy"></select></label><div id="graph"></div><p id="route"></p><p id="visit"></p></section></main></body></html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Лабораторная №5 · Генетический алгоритм</title><link rel="stylesheet" href="style.css"><script src="model.js" defer></script><script src="app.js" defer></script></head>
+<body><main>
+<header><p>INTELIGENȚA ARTIFICIALĂ · LAB 05</p><h1>Генетический алгоритм</h1><p>Вариант №8 · f(x) = 1 - |2x - 1| на [0, 1] · 4 бита</p></header>
+<section><h2>Параметры эксперимента</h2><form novalidate>
+<label>Размер популяции N<input name="N" value="4" inputmode="numeric"></label>
+<label>Кроссовер pc<input name="pc" value="0.8" inputmode="decimal"></label>
+<label>Мутация pm<input name="pm" value="0.05" inputmode="decimal"></label>
+<label>Поколения G<input name="G" value="30" inputmode="numeric"></label>
+<label>Seed<input name="seed" value="42" inputmode="numeric"></label>
+<button>Запустить</button></form><p id="error" role="alert" hidden></p>
+<button id="experiments" type="button">Сравнить 4 эксперимента</button></section>
+<section id="comparison" hidden><h2>Сравнение экспериментов</h2><div id="summary" class="table"></div><div id="curves"></div>
+<label>Просмотреть лог эксперимента<select id="choice"></select></label></section>
+<section><h2>Результат запуска</h2><p id="best" aria-live="polite"></p><p>Точный максимум на сетке: 14/15 при b = 7 или 8. Максимум на непрерывном интервале: 1 при x = 0,5.</p>
+<div id="plot"></div><h3>Статистика поколений</h3><div id="stats" class="table stats"></div></section>
+<section><h2>Популяция и операции</h2><label>Поколение<select id="generation"></select></label><div id="population" class="table"></div><pre id="log"></pre><button id="download" type="button">Скачать полный лог (TXT)</button></section>
+</main></body></html>

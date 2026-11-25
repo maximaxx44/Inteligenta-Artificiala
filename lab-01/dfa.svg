@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 252" role="img" aria-labelledby="title desc">
+  <title id="title">ДКА для (ab)ⁿ(cd)ᵐ</title>
+  <desc id="desc">Единственное принимающее состояние q7. Все непоказанные переходы ведут в тупик.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 8 4 0 8z" fill="#547481"/>
+    </marker>
+  </defs>
+  <rect width="730" height="252" rx="12" fill="#f1f7f7"/>
+  <g fill="none" stroke="#547481" stroke-width="1.5" marker-end="url(#arrow)">
+    <path d="M12 88H38"/><path d="M82 88H127"/><path d="M172 88H222"/>
+    <path d="M267 88H317"/><path d="M362 88H412"/><path d="M457 88H517"/>
+    <path d="M562 88H627"/><path d="M655 115V165"/><path d="M633 188H563"/>
+    <path d="M540 166V111"/><path d="M428 66V38Q428 28 418 28H167Q155 28 155 40V66"/>
+    <path d="M77 180C57 148 128 146 108 179"/>
+  </g>
+  <g fill="#fff" stroke="#326175" stroke-width="1.5">
+    <circle cx="60" cy="88" r="22"/><circle cx="150" cy="88" r="22"/>
+    <circle cx="245" cy="88" r="22"/><circle cx="340" cy="88" r="22"/>
+    <circle cx="435" cy="88" r="22"/><circle cx="540" cy="88" r="22"/>
+    <circle cx="655" cy="88" r="26" fill="#c9f0dc"/><circle cx="655" cy="88" r="21" fill="none"/>
+    <circle cx="655" cy="188" r="22"/><circle cx="540" cy="188" r="22"/><circle cx="93" cy="196" r="22"/>
+  </g>
+  <g fill="#182f37" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15">
+    <text x="60" y="93">q0</text><text x="150" y="93">q1</text><text x="245" y="93">q2</text>
+    <text x="340" y="93">q3</text><text x="435" y="93">q4</text><text x="540" y="93">q5</text>
+    <text x="655" y="93">q7</text><text x="655" y="193">q6</text><text x="540" y="193">q8</text>
+    <text x="93" y="201">⊥</text>
+    <text x="104" y="78">a</text><text x="197" y="78">b</text><text x="293" y="78">a</text>
+    <text x="388" y="78">b</text><text x="488" y="78">c</text><text x="595" y="78">d</text>
+    <text x="671" y="145">c</text><text x="598" y="179">d</text><text x="523" y="145">c</text>
+    <text x="290" y="21">a</text><text x="93" y="149">любой символ</text>
+    <text x="180" y="201" text-anchor="start">Все непоказанные переходы ведут в ⊥.</text>
+  </g>
+</svg>
