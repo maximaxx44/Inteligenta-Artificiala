@@ -1,7 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const titles={demand:'Спрос',supply:'Предложение',inflation:'Инфляция, %',output:'Изменение цены, %'};
-const colors=['#1762a0','#936014','#00816e','#b01e50'];
+const colors=['#1762a0','#936014','#00816e','#8250a8','#bf6019','#ae355d','#607120'];
 const form=document.querySelector('form');
 const fields=['demand','supply','inflation'];
 for(const [i,s] of scenarios.entries())$('presets').add(new Option(s.name,i));
@@ -52,7 +52,7 @@ function run() {
   $('interpretation').textContent=labels[result.category]+' цен по оценке модели.';
   $('membership').innerHTML=[...fields,'output'].map(key=>{
     const curves=Object.entries(terms[key]).map(([term,shape],i)=>({name:labels[term],color:colors[i],fn:x=>membership(x,shape)}));
-    if(key==='output')curves.push({name:'Агрегация MAX',color:colors[3],fn:result.aggregated});
+    if(key==='output')curves.push({name:'Агрегация MAX',color:'#112a34',fn:result.aggregated});
     return chart(titles[key],curves,limits[key],[0,1],key==='output'?result.value:input[key]);
   }).join('');
   $('inflation-chart').innerHTML=chart('Изменение цены, %',[{name:'Сценарии инфляции',color:colors[2],fn:inflation=>infer({...input,inflation}).value}],limits.inflation,limits.output,input.inflation,result.value);

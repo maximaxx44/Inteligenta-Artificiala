@@ -1,27 +1,37 @@
 'use strict';
 
 const terms = {
-  demand: {low:[0,0,25,50], mid:[25,50,50,75], high:[50,75,100,100]},
-  supply: {low:[0,0,25,50], mid:[25,50,50,75], high:[50,75,100,100]},
-  inflation: {low:[0,0,4,10], high:[4,10,20,20]},
-  output: {fall:[-20,-20,-12,-2], flat:[-6,0,0,6], rise:[2,12,20,20]},
+  demand: {low:[0,0,0,50], mid:[0,50,50,100], high:[50,100,100,100]},
+  supply: {low:[0,0,0,50], mid:[0,50,50,100], high:[50,100,100,100]},
+  inflation: {low:[0,0,0,10], mid:[0,10,10,20], high:[10,20,20,20]},
+  output: {
+    strongFall:[-16,-12,-12,-8],
+    fall:[-10,-6,-6,-2],
+    flat:[-4,0,0,4],
+    slightRise:[0,4,4,8],
+    rise:[4,8,8,12],
+    strongRise:[8,12,12,16],
+    veryStrongRise:[12,16,16,20],
+  },
 };
 const limits = {demand:[0,100], supply:[0,100], inflation:[0,20], output:[-20,20]};
-const labels = {low:'Низкий уровень', mid:'Средний уровень', high:'Высокий уровень', fall:'Снижение', flat:'Стабильность', rise:'Рост'};
-const and = (...items) => ({op:'AND', items});
-const or = (...items) => ({op:'OR', items});
-const rules = [
-  [and('demand.low','supply.low'),'flat','Низкий спрос И низкое предложение'],
-  [and('demand.low','supply.mid'),'flat','Низкий спрос И нормальное предложение'],
-  [and('demand.low','supply.high'),'fall','Низкий спрос И высокое предложение'],
-  [and('demand.mid','supply.mid'),'flat','Средний спрос И нормальное предложение'],
-  [and('demand.mid','supply.high'),'fall','Средний спрос И высокое предложение'],
-  [and('demand.high','supply.mid'),'rise','Высокий спрос И нормальное предложение',0.55],
-  [and('demand.high','supply.high'),'flat','Высокий спрос И высокое предложение'],
-  [and(or('demand.mid','demand.high'),'supply.low'),'rise','(Средний ИЛИ высокий спрос) И низкое предложение'],
-  ['inflation.high','rise','Высокая инфляция'],
-  [and('demand.high','supply.mid'),'flat','Высокий спрос И нормальное предложение: стабильная составляющая',0.75],
-];
+const labels = {
+  low:'Низкий уровень', mid:'Средний уровень', high:'Высокий уровень',
+  strongFall:'Сильное снижение', fall:'Снижение', flat:'Стабильность',
+  slightRise:'Небольшой рост', rise:'Рост', strongRise:'Сильный рост',
+  veryStrongRise:'Очень сильный рост',
+};
+const levels = ['low','mid','high'];
+const outputTerms = Object.keys(terms.output);
+const rules = levels.flatMap((demand,demandIndex)=>
+  levels.flatMap((supply,supplyIndex)=>
+    levels.map((inflation,inflationIndex)=>[
+      {op:'AND', items:['demand.'+demand,'supply.'+supply,'inflation.'+inflation]},
+      outputTerms[2+demandIndex-supplyIndex+inflationIndex],
+      'Спрос: '+labels[demand]+' | Предложение: '+labels[supply]+' | Инфляция: '+labels[inflation],
+    ])
+  )
+);
 function membership(x,[a,b,c,d]) {
   if (x<a || x>d) return 0;
   if (x>=b && x<=c) return 1;
@@ -33,7 +43,7 @@ function activation(clause, degrees) {
     return degrees[key][term];
   }
   const values=clause.items.map(item=>activation(item,degrees));
-  return clause.op==='AND' ? Math.min(...values) : Math.max(...values);
+  return Math.min(...values);
 }
 function infer(input) {
   const degrees={};
@@ -44,13 +54,19 @@ function infer(input) {
       throw new RangeError('Допустимый диапазон для '+key+': '+min+'-'+max);
     degrees[key]=Object.fromEntries(Object.entries(terms[key]).map(([name,shape])=>[name,membership(value,shape)]));
   }
-  const strengths={fall:0,flat:0,rise:0};
+  const strengths=Object.fromEntries(outputTerms.map(term=>[term,0]));
   const active=rules.map(([condition,term,description,weight=1])=>{
     const strength=Math.min(activation(condition,degrees),weight);
     strengths[term]=Math.max(strengths[term],strength);
     return {term,description,strength,weight};
   });
-  const aggregated=x=>Math.max(...Object.entries(terms.output).map(([name,shape])=>Math.min(strengths[name],membership(x,shape))));
+  const activeOutputs=Object.entries(terms.output).filter(([name])=>strengths[name]>0);
+  const aggregated=x=>{
+    let degree=0;
+    for(const [name,shape] of activeOutputs)
+      degree=Math.max(degree,Math.min(strengths[name],membership(x,shape)));
+    return degree;
+  };
   let area=0,moment=0;
   const left=limits.output[0], dx=.05, count=800;
   for(let i=0;i<=count;i++){
